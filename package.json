@@ -1,0 +1,24 @@
+{
+  "name": "grupo_11_mimimbreria",
+  "version": "1.0.0",
+  "description": "Venta de artículos de mimbre",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willymiller/grupo_11_mimimbreria.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willymiller/grupo_11_mimimbreria/issues"
+  },
+  "homepage": "https://github.com/willymiller/grupo_11_mimimbreria#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

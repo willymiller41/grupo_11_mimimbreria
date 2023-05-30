@@ -1,0 +1,518 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+/* Navegación principal */
+.nav-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+.logo{
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-texto{
+    margin-top:0;
+    color: brown;
+    font-family: 'Chicle', cursive;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.usuarios{
+    display: none;
+}
+
+/* Navegación de categorías */
+.nav-secundario{
+    display: none;
+}
+
+.navegacion{
+    display: none;
+}
+
+.burger-menu{
+    margin: auto;
+    font-size: 30px;
+    display: block;
+    max-width: 50px;
+    background-color: white;
+    color: brown;
+    text-align: center;
+    border-radius: 5px;
+}
+
+hr{
+    border-color: brown;
+    height: 2px;
+}
+
+/* Área dinámica para muestra de */
+main{
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    margin: auto;
+    padding: 5px;
+}
+
+h1, h2, h3{
+    color: brown;
+    font-weight: 400;
+}
+
+.novedades-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productos{
+    max-width: 270px;
+    margin: auto;
+}
+
+.productos-imagen{
+    margin: auto;
+    text-align: center;
+}
+
+/** Detalles de un producto **/
+.producto-detalle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    height: 400px;
+    margin: auto;
+    justify-content: space-between;
+    border: 1px solid brown;
+}
+
+.producto-detalle-imagen{
+    margin: 20px;
+    text-align: center;
+}
+
+.producto-detalle-imagen .imagen{
+    width: 90%;
+    height: auto;
+}
+
+.producto-detalle-caracteristicas{
+    padding: 10px;
+}
+
+.producto-detalle-caracteristicas-botones{
+    text-align: right;
+}
+
+.producto-detalle-caracteristicas-botones-submit{
+    height: 40px;
+    width: 130px;
+    margin: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: brown;
+    border: none;
+    border-radius: 8px;
+}
+
+.productos-similares{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    text-align: center;
+}
+
+.productos-similares-producto{
+    display: flex;
+    flex-direction: row;
+}
+
+.productos-comentarios{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+}
+
+.productos-comentarios-logo{
+    width: 20%;
+    margin: auto;
+    font-size: 50px;
+    color: brown;
+}
+
+.productos-comentarios-usuario{
+    width: 30%;
+}
+
+.nuestra-historia-texto{
+    font-size: 25px;
+    font-style: italic;
+    color: brown;
+    text-align: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px 40px;
+    border: 1px solid brown;
+}
+
+.login-datos{
+    padding: 10px;
+}
+
+.login-datos input{
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+
+.login-datos label{
+    color: brown;
+}
+
+.login-botones button{
+    width: 130px;
+    height: 40px;
+    margin: 5px;
+    padding: 11px;
+    font-size: 15px;
+    color: white;
+    background-color: brown;
+    border: none;
+    border-radius: 8px;
+}
+
+.login-botones{
+    text-align: center;
+}
+
+.login-botones a{
+    color: white;
+    text-decoration: none;
+}
+
+/** Estilos para el registro de usuarios **/
+.register{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 450px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px 40px;
+    border: 1px solid brown;
+}
+
+.register-datos{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.register-datos input{
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+
+.register-datos label{
+    color: brown;
+}
+
+.register-datos-personales{
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.register-datos-ubicacion{
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.register-botones{
+    text-align: center;
+}
+
+.register-botones button{
+    width: 130px;
+    height: 40px;
+    margin: 5px;
+    padding: 11px;
+    font-size: 15px;
+    color: white;
+    background-color: brown;
+    border: none;
+    border-radius: 8px;
+}
+
+.register-botones a{
+    color: white;
+    text-decoration: none;
+}
+
+/** Carrito de compras **/
+.carrito{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    justify-content: space-between;
+    border: 1px solid brown;
+}
+
+.carrito-productos{
+    justify-content: space-around;
+}
+
+.carrito-productos-producto{
+    display: flex;
+    flex-direction: row;
+}
+
+.carrito-productos-producto-imagen img{
+    width: 200px;
+}
+
+.carrito-productos-producto-detalles{
+    margin: auto;
+}
+
+.carrito-productos-producto-cantidad{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 30px;
+    color: brown;
+}
+
+.carrito-productos-producto-cantidad-items{
+    padding: 10px;
+}
+
+.carrito-productos-producto-subtotal{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    color: brown;
+}
+
+.carrito-productos-producto-subtotal label{
+    padding: 5px;
+    font-size: 20px;
+    color: brown;
+}
+
+.carrito-total{
+    font-size: 25px;
+    color: brown;
+    text-align: right;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.carrito-botones{
+    text-align: right;
+}
+
+/* Estilos para mobile del footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .footer-menu-titulo, .footer-productos-titulo, .footer-descubri-titulo, .footer-redes-titulo{
+    font-size: 20px;
+    color: brown;
+    font-weight: 400;
+}
+
+footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .footer-redes-links{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    font-size: 35px;
+    font-weight: 400;
+    color: brown;
+}
+
+.footer-ubicacion{
+    margin: auto;
+    padding: 10px;
+}
+
+.footer-info{
+    display: none;
+}
+
+/* Estilos para visualización en PC */
+@media only screen and (min-width: 769px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-principal{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        justify-content: center;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        width: 50%;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+
+    .navegacion a{
+        text-decoration: none;
+    }
+
+    .paginas{
+        justify-content: space-between;
+    }
+
+    .usuarios{
+        display: flex;
+        flex-direction: row;
+        font-size: 25px;
+        color: brown;
+        align-items: baseline;
+    }
+
+    .usuarios i{
+        padding: 10px;
+        color: brown;
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .nav-secundario{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding: 5px;
+        height: 130px;
+        margin-bottom: 5px;
+    }
+
+    .btn-categorias{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    color: brown;
+    }
+
+    .categorias-texto{
+        padding: 0px;
+        font-size: 20px;
+        color: brown;
+        font-weight: 400;
+    }
+
+    main{
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .novedades-productos, .ofertas-productos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .productos{
+        max-width: 250px;
+    }
+
+    .productos-imagen{
+        text-align: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+    }
+
+    .footer-redes{
+        width: 40%;
+    }
+    
+    footer .footer-menu-titulo, .footer-productos-titulo, .footer-descubri-titulo, .footer-redes-titulo{
+        font-size: 25px;
+        color: brown;
+        font-weight: 400;
+    }
+    
+    footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .footer-redes-links{
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        font-weight: 200;
+    }
+    
+    .footer-ubicacion{
+/*         display: flex;
+        flex-direction: row; */
+        margin: 20px;
+
+    }
+    
+    .footer-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+        color: brown;
+        font-size: 20px;
+    }
+}
