@@ -1,11 +1,19 @@
 let usersController = {
    
     list: function(req, res){
-        res.render('productList')
+        res.render('products/productList')
     },
 
     detail: function(req, res){
-        res.render('productDetail')
+        res.render('products/productDetail')
+    },
+
+    edit: function(req, res){
+        res.render('products/productEdit')
+    },
+    
+    create: function(req, res){
+        res.render('products/productCreate')
     }
 
  };

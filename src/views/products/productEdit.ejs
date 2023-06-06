@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header.ejs')  %>
+    <hr>
+    <main>
+        <h1>Edición de productos</h1>
+        <form action="#" method="post">
+            <div class="edicion">
+                <div class="edicion-datos">
+                    <div class="edicion-datos-1">
+                        <div class="edicion-datos-control">
+                            <label for="nombre">Nombre del producto: </label><br>
+                            <input type="text" name="nombre" id="nombre">
+                        </div>
+                        <div class="edicion-datos-control">
+                            <label for="descripcion">Descripción: </label><br>
+                            <textarea name="descripcion" id="descripcion" cols="50" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="edicion-datos-2">
+                        <div class="edicion-datos-control">
+                            <label for="image">Ingrese la imagen: </label><br>
+                            <input type="file" name="image" id="image">
+                        </div>
+                        <div class="edicion-datos-control">
+                            <label for="price">Precio: </label><br>
+                            <input type="text" name="price" id="price">
+                        </div>
+                        <div class="edicion-datos-control">
+                            <label for="categoria">Categoría: </label><br>
+                            <select id="categoria" name="categoria">
+                                <option value="canastos">Canastos</option>
+                                <option value="pantallas">Pantallas</option>
+                                <option value="sillones">Sillones</option>
+                                <option value="mesas">Mesas</option>
+                                <option value="infantiles">Infantiles</option>
+                                <option value="sillas">Sillas</option>
+                            </select>
+                        </div>
+                        <div class="edicion-datos-control-check">
+                            <label for="oferta">Oferta? <input type="checkbox" id="oferta" name="oferta" value="oferta"></label>
+                        </div>
+                        <div class="edicion-datos-control-check">
+                            <label for="destacado">Destacado: <input type="checkbox" id="destacado" name="destacado" value="destacado"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="edicion-botones">
+                    <button type="submit">Guardar</button>
+                    <button type="button">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <hr>
+    <%- include('../partials/footer.ejs')  %>
+</body>
+</html>

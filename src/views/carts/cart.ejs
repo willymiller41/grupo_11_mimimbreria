@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header.ejs')  %>
+    <hr>
+    <main>
+        <h1>Carrito de compras</h1>
+        <div class="carrito">
+            <div class="carrito-productos">
+                <div class="carrito-productos-producto">
+                    <div class="carrito-productos-producto-imagen">
+                        <img src="/img/productos_canastos.jpg" alt="Canasta cilindro alto" class="imagen">
+                    </div>
+                    <div class="carrito-productos-producto-detalles">
+                        <h2>Leñeros</h2>
+                        <h3>$ 1.680,00</h3>
+                    </div>
+                    <div class="carrito-productos-producto-cantidad">
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-plus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items"><label for="">1</label></div>
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-minus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="carrito-productos-producto-subtotal">
+                        <label for="">Subtotal: </label>
+                        <label for="">$ 1.680</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="carrito-productos-producto">
+                    <div class="carrito-productos-producto-imagen">
+                        <img src="/img/productos_canastos_002.jpg" alt="Canasta cilindro alto" class="imagen">
+                    </div>
+                    <div class="carrito-productos-producto-detalles">
+                        <h2>Canastos</h2>
+                        <h3>$ 1.500,00</h3>
+                    </div>
+                    <div class="carrito-productos-producto-cantidad">
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-plus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items"><label for="">1</label></div>
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-minus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="carrito-productos-producto-subtotal">
+                        <label for="">Subtotal: </label>
+                        <label for="">$ 1.500</label>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="carrito-total">
+                <label for="">Total: </label>
+                <label for="">$ 3.180</label>
+            </div>
+            <div class="carrito-botones-container">
+                <button type="submit" class="carrito-botones">Agregar Productos</button>
+                <button type="submit" class="carrito-botones">Comprar</button>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <%- include('../partials/footer')  %>
+</body>
+</html>

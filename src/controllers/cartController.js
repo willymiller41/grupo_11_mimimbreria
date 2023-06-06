@@ -1,7 +1,7 @@
 let cartController = {
 
     cart: function(req, res){
-        res.render('cart')
+        res.render('carts/cart')
     },
     
  };

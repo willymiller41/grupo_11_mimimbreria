@@ -13,12 +13,14 @@ app.get('/', mainRoutes);
 app.get('/nuestraHistoria', mainRoutes);
 
 app.get('/login', usersRoutes);
-app.get('/register', usersRoutes);
+app.get('/users/register', usersRoutes);
 
 app.get('/list', productsRoutes);
 app.get('/detail', productsRoutes);
+app.get('/products/edit', productsRoutes);
+app.get('/products/create', productsRoutes);
 
-app.get('/cart', cartRoutes);
+app.get('/carts/cart', cartRoutes);
 
 app.listen('3000', ()=>{
     console.log('Servidor funcionando en el puerto 3000');

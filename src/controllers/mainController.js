@@ -1,11 +1,11 @@
 let mainController = {
 
     index: function(req, res){
-        res.render('index')
+        res.render('main/index')
     },
 
     nuestraHistoria: function(req, res){
-        res.render('nuestraHistoria')
+        res.render('main/nuestraHistoria')
     }
 
  };
