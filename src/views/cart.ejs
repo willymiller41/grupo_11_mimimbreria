@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="icon" href="/img/logo.ico" type="image/x-icon" />
-    <title>Mi Mimbrería</title>
-</head>
+<%- include('./partials/head') %>
 <body>
     <header>
         <div class="nav-principal">
@@ -42,7 +30,7 @@
             <div class="usuarios">
                 <input type="search" id="search" placeholder="Buscar..." />
                 <i class="fas fa-search"></i>
-                <i class="fas fa-user"></i>
+                <a href="/login"><i class="fas fa-user"></i></a>
                 <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
@@ -114,12 +102,63 @@
     </header>
     <hr>
     <main>
-        <div class="nuestra-historia">
-            <h1>Nuestra Historia</h1>
-            <p class="nuestra-historia-texto">Fundada en 1950</p>
-            <p class="nuestra-historia-texto">Somos descendientes de una familia italiana que inmigró al país a principios del siglo XX, plenos de sueños e ilusiones.</p>
-            <p class="nuestra-historia-texto">Liborio, padre y fundador de la firma fue quien empezó vendiendo canastas y sillas, en un carro tirado a caballo que circulaba entre los barrios de Las Cañitas y Retiro, hasta que en el año 1945 ancló en Palermo y abrió su local en la calle Gorriti 5630.</p>
-            <p class="nuestra-historia-texto">Desde hace muchos años, las hermanas Marcovecchio, sus herederas, atienden el local, lugar favorito de productoras, arquitectos y decoradores que acuden en búsqueda de soluciones en mimbre ratán o caña para sus mas variados proyectos, cautivados por la personalidad de estas mujeres que ya cuentan con mas de 80 años.</p>
+        <h1>Carrito de compras</h1>
+        <div class="carrito">
+            <div class="carrito-productos">
+                <div class="carrito-productos-producto">
+                    <div class="carrito-productos-producto-imagen">
+                        <img src="/img/productos_canastos.jpg" alt="Canasta cilindro alto" class="imagen">
+                    </div>
+                    <div class="carrito-productos-producto-detalles">
+                        <h2>Leñeros</h2>
+                        <h3>$ 1.500,00</h3>
+                    </div>
+                    <div class="carrito-productos-producto-cantidad">
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-plus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items"><label for="">1</label></div>
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-minus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="carrito-productos-producto-subtotal">
+                        <label for="">Subtotal: </label>
+                        <label for="">$ 1.500</label>
+                    </div>
+                </div>
+                <hr>
+                <div class="carrito-productos-producto">
+                    <div class="carrito-productos-producto-imagen">
+                        <img src="/img/productos_canastos.jpg" alt="Canasta cilindro alto" class="imagen">
+                    </div>
+                    <div class="carrito-productos-producto-detalles">
+                        <h2>Leñeros</h2>
+                        <h3>$ 1.500,00</h3>
+                    </div>
+                    <div class="carrito-productos-producto-cantidad">
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-plus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items"><label for="">1</label></div>
+                        <div class="carrito-productos-producto-cantidad-items"><i class="fas fa-minus-square"></i></div>
+                        <div class="carrito-productos-producto-cantidad-items">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                    <div class="carrito-productos-producto-subtotal">
+                        <label for="">Subtotal: </label>
+                        <label for="">$ 1.500</label>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="carrito-total">
+                <label for="">Total: </label>
+                <label for="">$ 3.000</label>
+            </div>
+            <div class="carrito-botones">
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Vaciar Carrito</button>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Agregar productos</button>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Comprar</button>
+            </div>
         </div>
     </main>
     <hr>
