@@ -26,13 +26,13 @@ header{
     align-items: center;
 }
 
-.logo-texto{
+/* .logo-texto{
     margin-top:0;
     color: brown;
     font-family: 'Chicle', cursive;
     font-size: 30px;
     font-weight: 500;
-}
+} */
 
 .usuarios{
     display: none;
@@ -53,13 +53,13 @@ header{
     display: block;
     max-width: 50px;
     background-color: white;
-    color: brown;
+    color: #308781;
     text-align: center;
     border-radius: 5px;
 }
 
 hr{
-    border-color: brown;
+    border-color: #308781;
     height: 1px;
 }
 
@@ -73,7 +73,7 @@ main{
 }
 
 h1, h2, h3{
-    color: brown;
+    color: #308781;
     font-weight: 400;
 }
 
@@ -107,7 +107,7 @@ h1, h2, h3{
     height: auto;
     margin: auto;
     justify-content: space-between;
-    border: 1px solid brown;
+    border: 1px solid #308781;
 }
 
 .producto-detalle-imagen{
@@ -134,7 +134,7 @@ h1, h2, h3{
     margin: 5px;
     font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: #308781;
     border: none;
     border-radius: 8px;
     text-decoration: none;
@@ -167,7 +167,7 @@ h1, h2, h3{
 .productos-comentarios-logo{
     width: 20%;
     font-size: 50px;
-    color: brown;
+    color: #308781;
 }
 
 .productos-comentarios-usuario{
@@ -178,7 +178,7 @@ h1, h2, h3{
 .nuestra-historia-texto{
     font-size: 25px;
     font-style: italic;
-    color: brown;
+    color: #308781;
     text-align: center;
 }
 
@@ -192,7 +192,7 @@ h1, h2, h3{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 30px 40px;
-    border: 1px solid brown;
+    border: 1px solid #308781;
 }
 
 .login-datos{
@@ -205,7 +205,7 @@ h1, h2, h3{
 }
 
 .login-datos label{
-    color: brown;
+    color: #308781;
 }
 
 .login-botones button{
@@ -215,7 +215,7 @@ h1, h2, h3{
     padding: 11px;
     font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: #308781;
     border: none;
     border-radius: 8px;
 }
@@ -238,7 +238,7 @@ h1, h2, h3{
     margin: auto;
     margin-bottom: 20px;
     padding: 5px 40px;
-    border: 1px solid brown;
+    border: 1px solid #308781;
 }
 
 .register-datos{
@@ -253,7 +253,7 @@ h1, h2, h3{
 }
 
 .register-datos label{
-    color: brown;
+    color: #308781;
 }
 
 .register-datos-personales{
@@ -279,7 +279,7 @@ h1, h2, h3{
     padding: 11px;
     font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: #308781;
     border: none;
     border-radius: 8px;
 }
@@ -298,7 +298,7 @@ h1, h2, h3{
     margin: auto;
     margin-bottom: 20px;
     padding: 5px 40px;
-    border: 1px solid brown;
+    border: 1px solid #308781;
 }
 
 .edicion-datos{
@@ -312,7 +312,7 @@ h1, h2, h3{
 }
 
 .edicion-datos-1 label, .edicion-datos-2 label{
-    color: brown;
+    color: #308781;
 }
 
 .edicion-datos-control{
@@ -330,7 +330,7 @@ h1, h2, h3{
     padding: 11px;
     font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: #308781;
     border: none;
     border-radius: 8px;
 }   
@@ -342,7 +342,7 @@ h1, h2, h3{
     margin: auto;
     margin-bottom: 20px;
     padding: 5px;
-    border: 1px solid brown;
+    border: 1px solid #308781;
 }
 
 .edicion-datos{
@@ -356,7 +356,7 @@ h1, h2, h3{
 }
 
 .edicion-datos-1 label, .edicion-datos-2 label{
-    color: brown;
+    color: #308781;
 }
 
 .edicion-datos-control{
@@ -374,7 +374,7 @@ h1, h2, h3{
     padding: 11px;
     font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: #308781;
     border: none;
     border-radius: 8px;
 }
@@ -387,7 +387,7 @@ h1, h2, h3{
     height: auto;
     margin: auto;
     justify-content: space-between;
-    border: 1px solid brown;
+    border: 1px solid #308781;
 }
 
 .carrito-productos{
@@ -413,7 +413,7 @@ h1, h2, h3{
     margin: auto;
     justify-content: space-between;
     font-size: 30px;
-    color: brown;
+    color: #308781;
 }
 
 .carrito-productos-producto-cantidad-items{
@@ -424,18 +424,18 @@ h1, h2, h3{
     display: flex;
     flex-direction: row;
     margin: auto;
-    color: brown;
+    color: #308781;
 }
 
 .carrito-productos-producto-subtotal label{
     padding: 5px;
     font-size: 20px;
-    color: brown;
+    color: #308781;
 }
 
 .carrito-total{
     font-size: 25px;
-    color: brown;
+    color: #308781;
     text-align: right;
     margin-right: 10px;
     padding: 10px;
@@ -451,7 +451,7 @@ h1, h2, h3{
     margin: 5px;
     font-size: 15px;
     color: white;
-    background-color: brown;
+    background-color: #308781;
     border: none;
     border-radius: 8px;
 }
@@ -465,7 +465,7 @@ footer{
 
 footer .footer-menu-titulo, .footer-productos-titulo, .footer-descubri-titulo, .footer-redes-titulo{
     font-size: 20px;
-    color: brown;
+    color: #308781;
     font-weight: 400;
 }
 
@@ -476,7 +476,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     justify-content: space-around;
     font-size: 35px;
     font-weight: 400;
-    color: brown;
+    color: #308781;
 }
 
 .footer-ubicacion{
@@ -493,7 +493,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     header{
         display: flex;
         flex-direction: column;
-        padding: 5px;
+        padding: 0px;
     }
 
     .nav-principal{
@@ -523,6 +523,17 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         text-decoration: none;
     }
 
+    .nav-imagen{
+        position: absolute;
+        z-index: -1;
+    }
+
+    .nav-imagen img{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
     .paginas{
         justify-content: space-between;
     }
@@ -530,28 +541,19 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     .usuarios{
         display: flex;
         flex-direction: row;
-        font-size: 25px;
-        color: brown;
+        font-size: 20px;
+        color: #308781;
         align-items: baseline;
     }
 
     .usuarios i{
-        padding: 10px;
-        color: brown;
+        padding: 5px;
+        padding-top: 15px;
+        color: #308781;
     }
 
     .burger-menu{
         display: none;
-    }
-
-    .nav-secundario{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-        padding: 5px;
-        height: 130px;
-        margin-bottom: 5px;
     }
 
     .btn-categorias{
@@ -559,13 +561,13 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     flex-direction: column;
     text-align: center;
     text-decoration: none;
-    color: brown;
+    color: #308781;
     }
 
     .categorias-texto{
         padding: 0px;
         font-size: 20px;
-        color: brown;
+        color: #308781;
         font-weight: 400;
     }
 
@@ -574,6 +576,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         width: 95%;
         flex-direction: column;
         margin: auto;
+        margin-top: 250px;
     }
 
     /** Estilos para el Login en Pc **/
@@ -586,7 +589,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 30px 40px;
-        border: 1px solid brown;
+        border: 1px solid #308781;
     }
 
     .login-datos{
@@ -599,7 +602,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     }
 
     .login-datos label{
-        color: brown;
+        color: #308781;
     }
 
     .login-botones button{
@@ -609,7 +612,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         padding: 11px;
         font-size: 15px;
         color: white;
-        background-color: brown;
+        background-color: #308781;
         border: none;
         border-radius: 8px;
     }
@@ -631,7 +634,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         height: 400px;
         margin: auto;
         justify-content: space-between;
-        border: 1px solid brown;
+        border: 1px solid #308781;
     }
 
     .producto-detalle-imagen{
@@ -658,7 +661,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         margin: 5px;
         font-size: 15px;
         color: white;
-        background-color: brown;
+        background-color: #308781;
         border: none;
         border-radius: 8px;
         text-decoration: none;
@@ -692,7 +695,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         width: 20%;
         margin: auto;
         font-size: 50px;
-        color: brown;
+        color: #308781;
     }
 
     .productos-comentarios-usuario{
@@ -721,7 +724,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         height: auto;
         margin: auto;
         justify-content: space-between;
-        border: 1px solid brown;
+        border: 1px solid #308781;
     }
     
     .carrito-productos{
@@ -747,7 +750,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         margin: auto;
         justify-content: space-between;
         font-size: 30px;
-        color: brown;
+        color: #308781;
     }
     
     .carrito-productos-producto-cantidad-items{
@@ -758,18 +761,18 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         display: flex;
         flex-direction: row;
         margin: auto;
-        color: brown;
+        color: #308781;
     }
     
     .carrito-productos-producto-subtotal label{
         padding: 5px;
         font-size: 20px;
-        color: brown;
+        color: #308781;
     }
     
     .carrito-total{
         font-size: 25px;
-        color: brown;
+        color: #308781;
         text-align: right;
         margin-right: 10px;
         padding: 10px;
@@ -786,7 +789,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         margin: 5px;
         font-size: 15px;
         color: white;
-        background-color: brown;
+        background-color: #308781;
         border: none;
         border-radius: 8px;
     }
@@ -800,7 +803,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         margin: auto;
         margin-bottom: 20px;
         padding: 5px 40px;
-        border: 1px solid brown;
+        border: 1px solid #308781;
     }
     
     .register-datos{
@@ -815,7 +818,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     }
     
     .register-datos label{
-        color: brown;
+        color: #308781;
     }
     
     .register-datos-personales{
@@ -841,7 +844,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         padding: 11px;
         font-size: 15px;
         color: white;
-        background-color: brown;
+        background-color: #308781;
         border: none;
         border-radius: 8px;
     }
@@ -860,7 +863,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         margin: auto;
         margin-bottom: 20px;
         padding: 10px;
-        border: 1px solid brown;
+        border: 1px solid #308781;
     }
 
     .edicion-datos{
@@ -878,7 +881,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     }
 
     .edicion-datos-1 label, .edicion-datos-2 label{
-        color: brown;
+        color: #308781;
         padding: 5px;
     }
 
@@ -903,7 +906,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         padding: 11px;
         font-size: 15px;
         color: white;
-        background-color: brown;
+        background-color: #308781;
         border: none;
         border-radius: 8px;
     }
@@ -922,7 +925,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     
     footer .footer-menu-titulo, .footer-productos-titulo, .footer-descubri-titulo, .footer-redes-titulo{
         font-size: 25px;
-        color: brown;
+        color: #308781;
         font-weight: 400;
     }
     
@@ -945,7 +948,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         flex-direction: row;
         justify-content: space-between;
         margin: 20px;
-        color: brown;
+        color: #308781;
         font-size: 20px;
     }
 }
