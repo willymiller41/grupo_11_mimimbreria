@@ -1,0 +1,103 @@
+[
+ {
+  "id": 1,
+  "name": "Canastos grandes",
+  "price": 1500,
+  "description": "Canastos de varios tamaños y diseños para usos múltiples.",
+  "image": "canastos_001.jpg",
+  "offer": true,
+  "discount": 25,
+  "category": "Canastos",
+  "stock": 30,
+  "order": 1
+ },
+ {
+  "id": 2,
+  "name": "Canastos para ropa",
+  "price": 1200,
+  "description": "Canastos de varios tamaños y diseños para ropa.",
+  "image": "canastos_002.jpg",
+  "discount": 0,
+  "category": "Canastos",
+  "stock": 30,
+  "order": 1
+ },
+ {
+  "id": 3,
+  "name": "Canastos floreros",
+  "price": 1400,
+  "description": "Canastos de base ancha para flores y plantas bajas",
+  "image": "canastos_003.jpg",
+  "discount": 0,
+  "category": "Canastos",
+  "stock": 20,
+  "order": 0
+ },
+ {
+  "id": 4,
+  "name": "Canastos floreros altos",
+  "price": 1600,
+  "description": "Canastos de base circular para plantas altas",
+  "image": "canastos_004.jpg",
+  "discount": 10,
+  "category": "Canastos",
+  "stock": 10,
+  "order": 0
+ },
+ {
+  "id": 5,
+  "name": "Canastos decorativos",
+  "price": 1600,
+  "description": "Canastos para decorar distintos ambientes",
+  "image": "canastos_005.jpg",
+  "discount": 15,
+  "category": "Canastos",
+  "stock": 15,
+  "order": 1
+ },
+ {
+  "id": 6,
+  "name": "Sillas inantiles",
+  "price": 2500,
+  "description": "Sillas para niños y niñas",
+  "image": "infantiles_001.jpg",
+  "discount": 15,
+  "category": "Infantiles",
+  "stock": 35,
+  "order": 0
+ },
+ {
+  "id": 7,
+  "name": "Mecedoras",
+  "price": 2300,
+  "description": "Mecedoras en diversos colores",
+  "image": "infantiles_002.jpg",
+  "discount": 5,
+  "category": "Infantiles",
+  "stock": 35,
+  "order": 1
+ },
+ {
+  "id": 8,
+  "name": "Moisés",
+  "price": 2300,
+  "description": "Moisés para bebés - varios tamaños y colores",
+  "image": "infantiles_003.jpg",
+  "discount": 5,
+  "category": "Infantiles",
+  "stock": 15,
+  "order": 1
+ },
+ {
+  "id": 9,
+  "name": "Va corregido 3",
+  "description": "va corregido 3",
+  "price": "3333",
+  "category": "canastos",
+  "discount": "10",
+  "stock": "40",
+  "image": "producto_1687988213063.jpg",
+  "offer": "on",
+  "order": "on"
+ }
+]

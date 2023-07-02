@@ -3,56 +3,46 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <hr>
     <main>
         <h1>Detalles</h1>
         <div class="producto-detalle">
             <div class="producto-detalle-imagen">
-                <img src="/img/productos_canastos.jpg" alt="Canasta cilindro alto" class="imagen">
+                <img src="/images/<%= producto.image %>" alt="" class="imagen">
             </div>
             <div class="producto-detalle-caracteristicas">
-                <h2>Leñeros</h2>
+                <h2><%= producto.name %></h2>
                 <h3>* * * * * 5 opiniones</h3>
-                <h2>$ 1.500,00</h2>
+                <h2>$ <%= producto.price %></h2>
                 <h2>Descripción</h2>
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non enim odit dolores rem assumenda reiciendis deserunt nam suscipit repellendus magnam asperiores delectus quod fuga aspernatur architecto.</h3>
+                <h3><%= producto.description %></h3>
+                <h2>Categoría: </h2>
+                <h3><%= producto.category %></h3>
             </div>
         </div>
         <div class="producto-detalle-caracteristicas-botones">
-            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/edit">Editar</a></button>
+            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/edit/<%= producto.id %>">Editar</a></button>
             <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/create">Agregar</a></button>
+            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/delete/<%= producto.id %>">Borrar</a></button>
             <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Comentar</button>
             <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Agregar al Carrito</button>
         </div>
         <h1>Productos Similares</h1>
-        <div class="productos-similares">
-            <div class="productos-similares-producto">
-                <div class="productos-similares-producto-imagen">
-                    <img src="/img/productos_canastos.jpg" alt="">
+        <div class="novedades-productos">
+            <% productosCategory.forEach(function(producto){ %>
+                <div class="productos">
+                    <div class="productos-imagen">
+                        <img src="/images/<%= producto.image %>" alt="">
+                    </div>
+                    <div class="productos-info">
+                        <p class="productos-info-titulo"><%= producto.name %></p>
+                        <p>$ <%= producto.price %></p>
+                    </div>
+                    <div class="productos-info-botonera">
+                        <a href="/products/detail/<%= producto.id %>">Ver más</a>
+                        <i class="fas fa-truck"></i>
+                    </div>
                 </div>
-                <div class="productos-similares-producto-detalle">
-                    <h2>Canastos</h2>
-                    <h3>$ 1.200,00</h3>
-                </div>   
-            </div>
-            <div class="productos-similares-producto">
-                <div class="productos-similares-producto-imagen">
-                    <img src="/img/productos_canastos.jpg" alt="">
-                </div>
-                <div class="productos-similares-producto-detalle">
-                    <h2>Canastos</h2>
-                    <h3>$ 1.200,00</h3>
-                </div>   
-            </div>
-            <div class="productos-similares-producto">
-                <div class="productos-similares-producto-imagen">
-                    <img src="/img/productos_canastos.jpg" alt="">
-                </div>
-                <div class="productos-similares-producto-detalle">
-                    <h2>Canastos</h2>
-                    <h3>$ 1.200,00</h3>
-                </div>   
-            </div>
+            <% }) %>
         </div>
         <h1>Comentarios</h1>
         <div class="productos-comentarios">

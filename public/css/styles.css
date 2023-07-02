@@ -1,12 +1,18 @@
 *{
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+body{
+    background: #f9f9f9 url(../images/bg.jpg);
+    margin: 0px;
 }
 
 header{
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 0px;
 }
 
 /* Navegación principal */
@@ -26,20 +32,7 @@ header{
     align-items: center;
 }
 
-/* .logo-texto{
-    margin-top:0;
-    color: brown;
-    font-family: 'Chicle', cursive;
-    font-size: 30px;
-    font-weight: 500;
-} */
-
 .usuarios{
-    display: none;
-}
-
-/* Navegación de categorías */
-.nav-secundario{
     display: none;
 }
 
@@ -47,15 +40,23 @@ header{
     display: none;
 }
 
+.nav-imagen img{
+    width: 100%;
+    height: auto;
+}
+
 .burger-menu{
     margin: auto;
     font-size: 30px;
     display: block;
-    max-width: 50px;
-    background-color: white;
-    color: #308781;
+    max-width: 60px;
+    background-color: #308781;
     text-align: center;
     border-radius: 5px;
+}
+
+.burger-menu i{
+    width: 40px;
 }
 
 hr{
@@ -66,10 +67,10 @@ hr{
 /* Área dinámica para muestra de productos*/
 main{
     display: flex;
-    width: 85%;
     flex-direction: column;
-    margin: auto;
-    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
 }
 
 h1, h2, h3{
@@ -77,26 +78,57 @@ h1, h2, h3{
     font-weight: 400;
 }
 
-.productos-lista{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Muestra de productos en la Home*/
+
+.novedades{
+    text-align: center;
 }
+
 
 .novedades-productos{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: auto;
+    text-align: center;
 }
 
 .productos{
-    max-width: 270px;
-    margin: auto;
+    width: 220px;
+    height: auto;
+    margin: 12px;
+    background: #308781 url(../images/noise.png);
+    border: 1px solid #308781;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px black;
 }
 
-.productos-imagen{
+.productos-imagen img{
+    width: 200px;
+    padding-top: 10px;
+}
+
+.productos-info{
+    width: 90%;
     margin: auto;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.productos-info-titulo{
+    font-size: 20px;
     text-align: center;
+}
+
+.productos-info-botonera{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 8px;
+}
+
+.productos-info-botonera a, i{
+    color: white;
+    text-decoration: none;
 }
 
 /** Detalles de un producto **/
@@ -111,6 +143,7 @@ h1, h2, h3{
 }
 
 .producto-detalle-imagen{
+    width: 350px;
     margin: 20px;
     text-align: center;
 }
@@ -479,6 +512,10 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     color: #308781;
 }
 
+.footer-redes-links i{
+    color: #308781;
+}
+
 .footer-ubicacion{
     margin: auto;
     padding: 10px;
@@ -544,6 +581,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         font-size: 20px;
         color: #308781;
         align-items: baseline;
+        margin: 5px;
     }
 
     .usuarios i{
@@ -556,27 +594,25 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         display: none;
     }
 
-    .btn-categorias{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    text-decoration: none;
-    color: #308781;
-    }
-
-    .categorias-texto{
-        padding: 0px;
-        font-size: 20px;
-        color: #308781;
-        font-weight: 400;
-    }
-
     main{
+        padding-top: 300px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+    }
+
+    .novedades{
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .novedades-productos{
         display: flex;
-        width: 95%;
-        flex-direction: column;
-        margin: auto;
-        margin-top: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .productos{
+        margin: 10px;
     }
 
     /** Estilos para el Login en Pc **/
@@ -695,26 +731,14 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         width: 20%;
         margin: auto;
         font-size: 50px;
+    }
+
+    .productos-comentarios-logo i{
         color: #308781;
     }
 
     .productos-comentarios-usuario{
         width: 30%;
-    }
-
-/* a revisar a qué corresponde*/
-    .novedades-productos, .ofertas-productos, .productos-lista{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .productos{
-        max-width: 250px;
-    }
-
-    .productos-imagen{
-        text-align: center;
     }
 
     .carrito{
@@ -798,12 +822,15 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     .register{
         display: flex;
         flex-direction: column;
-        width: 60%;
         height: auto;
         margin: auto;
         margin-bottom: 20px;
-        padding: 5px 40px;
+        padding: 5px 20px;
         border: 1px solid #308781;
+    }
+
+    .register-form{
+        width: 70%;
     }
     
     .register-datos{
@@ -858,7 +885,6 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     .edicion{
         display: flex;
         flex-direction: column;
-        width: 90%;
         height: auto;
         margin: auto;
         margin-bottom: 20px;

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Marcela",
+    "surname": "Salvatierra",
+    "email": "marce@gmail.com",
+    "phone": "0224 4254544",
+    "address": "Santiago 123",
+    "code": "1440",
+    "image": "marce.jpg",
+    "role": "admin",
+    "password": "123456"
+  },
+  {
+    "id": 2,
+    "name": "Lenna",
+    "surname": "Kely",
+    "email": "kely@gmail.com",
+    "phone": "1125235466",
+    "address": "Congreso 3010",
+    "code": "1419",
+    "image": "kely.jpg",
+    "role": "admin",
+    "password": "123456"
+  },
+  {
+    "id": 3,
+    "name": "Silvia",
+    "surname": "Espíndola",
+    "email": "silvia@gmail.com",
+    "phone": "0228 4263588",
+    "address": "Tucumán 3012",
+    "code": "1328",
+    "image": "silvia.jpg",
+    "role": "admin",
+    "password": "123456"
+  },
+  {
+    "id": 4,
+    "name": "Willy",
+    "surname": "Miller",
+    "email": "willy@gmail.com",
+    "phone": "1131742779",
+    "address": "Washington 3664",
+    "code": "1430",
+    "image": "willy.jpg",
+    "role": "admin",
+    "password": "123456"
+  }
+]

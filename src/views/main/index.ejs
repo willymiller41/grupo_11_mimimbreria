@@ -7,55 +7,26 @@
         <div class="novedades">
             <h1>Novedades</h1>
             <div class="novedades-productos">
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <a href="/detail"><img src="/img/productos_canastos.jpg" alt="Canasta cilindro alto"></a>
-                    </div>
-                </div>
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_pantallas.jpg" alt="Canastos leñeros">
-                    </div>
-                </div>
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_sillones.jpg" alt="Canastos para ropa">
-                    </div>
-                </div>
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_infantiles.jpg" alt="Paneras">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="ofertas">
-            <h1>Ofertas</h1>
-            <div class="ofertas-productos">
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_mesas.jpg" alt="Canasta cilindro alto">
-                    </div>
-                </div>
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_sillas.jpg" alt="Canastos leñeros">
-                    </div>
-                </div>
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_sillas_002.jpg" alt="Canastos para ropa">
-                    </div>
-                </div>
-                <div class="productos">
-                    <div class="productos-imagen">
-                        <img src="/img/productos_canastos_002.jpg" alt="Paneras">
-                    </div>
-                </div>
+                <% products.forEach(function(producto){ 
+                    if(producto.order == 1){ %>
+                        <div class="productos">
+                            <div class="productos-imagen">
+                                <img src="/images/<%= producto.image %>" alt="Canastos leñeros">
+                            </div>
+                            <div class="productos-info">
+                                <p class="productos-info-titulo"><%= producto.name %></p>
+                                <p>$ <%= producto.price %></p>
+                            </div>
+                            <div class="productos-info-botonera">
+                                <a href="/products/detail/<%= producto.id %>">Ver más</a>
+                                <i class="fas fa-truck"></i>
+                            </div>
+                        </div>
+                <% }}) %>
             </div>
         </div>
     </main>
     <hr>
-    <%- include('../partials/footer.ejs')  %>
+    <%- include('../partials/footer')  %>
 </body>
 </html>

@@ -6,31 +6,33 @@
     <hr>
     <main>
         <h1>Edición de productos</h1>
-        <form action="#" method="post">
+        <form action="/products/edit/<%= producto.id %>" method="post" enctype="multipart/form-data">
             <div class="edicion">
                 <div class="edicion-datos">
                     <div class="edicion-datos-1">
                         <div class="edicion-datos-control">
                             <label for="nombre">Nombre del producto: </label><br>
-                            <input type="text" name="nombre" id="nombre">
+                            <input type="text" name="name" id="name" value="<%= producto.name %>">
                         </div>
                         <div class="edicion-datos-control">
                             <label for="descripcion">Descripción: </label><br>
-                            <textarea name="descripcion" id="descripcion" cols="50" rows="10"></textarea>
+                            <textarea name="description" id="description" cols="50" rows="10"><%= producto.description %></textarea>
                         </div>
                     </div>
                     <div class="edicion-datos-2">
                         <div class="edicion-datos-control">
+                            <label for="imageOld">Imagen actual:</label>
+                            <img src="/images/<%= producto.image %>" alt="">
                             <label for="image">Ingrese la imagen: </label><br>
                             <input type="file" name="image" id="image">
                         </div>
                         <div class="edicion-datos-control">
                             <label for="price">Precio: </label><br>
-                            <input type="text" name="price" id="price">
+                            <input type="text" name="price" id="price" value="<%= producto.price %>">
                         </div>
                         <div class="edicion-datos-control">
                             <label for="categoria">Categoría: </label><br>
-                            <select id="categoria" name="categoria">
+                            <select id="category" name="category">
                                 <option value="canastos">Canastos</option>
                                 <option value="pantallas">Pantallas</option>
                                 <option value="sillones">Sillones</option>
@@ -40,10 +42,12 @@
                             </select>
                         </div>
                         <div class="edicion-datos-control-check">
-                            <label for="oferta">Oferta? <input type="checkbox" id="oferta" name="oferta" value="oferta"></label>
+                            <label for="offer">Oferta:</label>
+                            <input type="checkbox" id="offer" name="offer">
                         </div>
                         <div class="edicion-datos-control-check">
-                            <label for="destacado">Destacado: <input type="checkbox" id="destacado" name="destacado" value="destacado"></label>
+                            <label for="order">Destacado: </label>
+                            <input type="checkbox" id="order" name="order">
                         </div>
                     </div>
                 </div>
