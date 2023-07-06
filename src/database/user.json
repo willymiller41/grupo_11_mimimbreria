@@ -1,50 +1,51 @@
 [
-  {
-    "id": 1,
-    "name": "Marcela",
-    "surname": "Salvatierra",
-    "email": "marce@gmail.com",
-    "phone": "0224 4254544",
-    "address": "Santiago 123",
-    "code": "1440",
-    "image": "marce.jpg",
-    "role": "admin",
-    "password": "123456"
-  },
-  {
-    "id": 2,
-    "name": "Lenna",
-    "surname": "Kely",
-    "email": "kely@gmail.com",
-    "phone": "1125235466",
-    "address": "Congreso 3010",
-    "code": "1419",
-    "image": "kely.jpg",
-    "role": "admin",
-    "password": "123456"
-  },
-  {
-    "id": 3,
-    "name": "Silvia",
-    "surname": "Espíndola",
-    "email": "silvia@gmail.com",
-    "phone": "0228 4263588",
-    "address": "Tucumán 3012",
-    "code": "1328",
-    "image": "silvia.jpg",
-    "role": "admin",
-    "password": "123456"
-  },
-  {
-    "id": 4,
-    "name": "Willy",
-    "surname": "Miller",
-    "email": "willy@gmail.com",
-    "phone": "1131742779",
-    "address": "Washington 3664",
-    "code": "1430",
-    "image": "willy.jpg",
-    "role": "admin",
-    "password": "123456"
-  }
+    {
+        "id": 1,
+        "name": "Marcela",
+        "surname": "Salvatierra",
+        "email": "msalvatierra@gmail.com",
+        "phone": "23083002",
+        "address": "Aguirre 2830",
+        "code": "5530",
+        "password": "$2a$10$Qlrn40ursv9IQf.Z3xH7L./Fqxhm2NvxRFeT58isrpMYo.oUqOyTu",
+        "password2": "123456",
+        "avatar": "usuario_1688592698061.jpg",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "name": "Kely",
+        "surname": "Lenna",
+        "email": "klena@gmail.com",
+        "phone": "343480233",
+        "address": "Lavalle 4302",
+        "code": "3800",
+        "password": "$2a$10$8XWgPXnmHNgsUdNb/QRNr.lyc7F6YECmgrv/.KKzJ2QrhLianYjNO",
+        "avatar": "usuario_1688593045435.jpg",
+        "role": "admin"
+    },
+    {
+        "id": 3,
+        "name": "Silvia",
+        "surname": "Espíndola",
+        "email": "sespindola@gmail.com",
+        "phone": "23083002",
+        "address": "Reconquista 5400",
+        "code": "3288",
+        "password": "$2a$10$L.PYyL4K1OUG7k2AWmSLq.c0olsi8T74ZUnvORn0AfXyIfR5ntbtu",
+        "avatar": "usuario_1688593215606.jpg",
+        "role": "admin"
+    },
+    {
+        "id": 4,
+        "name": "Willy",
+        "surname": "Miller",
+        "email": "willymiller@hotmail.com",
+        "phone": "1131742779",
+        "address": "Washington 3664",
+        "code": "1419",
+        "password": "$2a$10$zrPUdKAnnSt78XqNmfuFquqDpxBbRfIchCE6jZ3xvZ4WomuOcYcGS",
+        "avatar": "usuario_1688593304796.jpg",
+        "role": "user"
+    }
 ]

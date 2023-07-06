@@ -7,56 +7,72 @@
         <h1>Alta de productos</h1>
         <form action="/products/create" method="post" enctype="multipart/form-data">
             <div class="edicion">
-                <div class="edicion-datos">
-                    <div class="edicion-datos-1">
-                        <div class="edicion-datos-control">
-                            <label for="name">Nombre del producto: </label><br>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div class="edicion-datos-control">
-                            <label for="description">Descripción: </label><br>
-                            <textarea name="description" id="description" cols="50" rows="10"></textarea>
-                        </div>
+                    <div class="edicion-datos-control">
+                        <label for="name">Nombre del producto: </label>
+                        <% if(locals.errors && errors.name) { %>
+                            <p class="error-msg"><%= errors.name.msg %></p>
+                        <% } %>
+                        <input class="edicion-datos-control-input" type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null  %>">
                     </div>
-                    <div class="edicion-datos-2">
-                        <div class="edicion-datos-control">
-                            <label for="image">Ingrese la imagen: </label><br>
-                            <input type="file" name="image" id="image">
-                        </div>
-                        <div class="edicion-datos-control">
-                            <label for="price">Precio: </label><br>
-                            <input type="text" name="price" id="price">
-                        </div>
-                        <div class="edicion-datos-control">
-                            <label for="category">Categoría: </label><br>
-                            <select id="category" name="category">
-                                <option value="canastos">Canastos</option>
-                                <option value="pantallas">Pantallas</option>
-                                <option value="sillones">Sillones</option>
-                                <option value="mesas">Mesas</option>
-                                <option value="infantiles">Infantiles</option>
-                                <option value="sillas">Sillas</option>
-                            </select>
-                        </div>
-                        <div class="edicion-datos-control-check">
-                            <label for="offer">En Oferta: <input type="checkbox" id="offer" name="offer" value="1"></label>
-                        </div>
-                        <div class="edicion-datos-control">
-                            <label for="discount">Descuento: </label><br>
-                            <input type="text" name="discount" id="discount">
-                        </div>
-                        <div class="edicion-datos-control">
-                            <label for="stock">Stock: </label><br>
-                            <input type="text" name="stock" id="stock">
-                        </div>
-                        <div class="edicion-datos-control-check">
-                            <label for="destacado">Destacado: <input type="checkbox" id="order" name="order" value="1"></label>
-                        </div>
+                    <div class="edicion-datos-control">
+                        <label for="description">Descripción: </label>
+                        <% if(locals.errors && errors.description) { %>
+                            <p class="error-msg"><%= errors.description.msg %></p>
+                        <% } %>
+                        <textarea class="edicion-datos-control-input" name="description" id="description" cols="50" rows="10"><%= locals.oldData ? oldData.description : null  %></textarea>
                     </div>
-                </div>
+                    <div class="edicion-datos-control">
+                        <label for="image">Ingrese la imagen:</label>
+                        <% if(locals.errors && errors.image) { %>
+                            <p class="error-msg"><%= errors.image.msg %></p>
+                        <% } %>
+                        <input class="edicion-datos-control-input" type="file" name="image" id="image">
+                    </div>
+                    <div class="edicion-datos-control">
+                        <label for="price">Precio: </label>
+                        <% if(locals.errors && errors.price) { %>
+                            <p class="error-msg"><%= errors.price.msg %></p>
+                        <% } %>
+                        <input type="text" name="price" id="price" value="<%= locals.oldData ? oldData.price : null  %>">
+                    </div>
+                    <div class="edicion-datos-control">
+                        <label for="category">Categoría: </label>
+                        <% if(locals.errors && errors.category) { %>
+                            <p class="error-msg"><%= errors.category.msg %></p>
+                        <% } %>
+                        <select id="category" name="category">
+                            <option value="" selected>Elegí una categoría</option>
+                            <% let categories = ["Canastos", "Pantallas", "Sillones", "Mesas", "Infantiles", "Sillas"] %>
+                            <% for(const category of categories) { %>
+                                <option
+                                    value="<%= category %>"
+                                    <%= locals.oldData && (category === oldData.category) ? 'selected' : "null" %>
+                                ><%= category %>
+                                </option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="edicion-datos-control">
+                        <label for="discount">Descuento: </label><br>
+                        <input type="text" name="discount" id="discount">
+                    </div>
+                    <div class="edicion-datos-control">
+                        <label for="stock">Stock: </label><br>
+                        <% if(locals.errors && errors.stock) { %>
+                            <p class="error-msg"><%= errors.stock.msg %></p>
+                        <% } %>
+                        <input type="text" name="stock" id="stock" value="<%= locals.oldData ? oldData.stock : null  %>">
+                    </div>
+                    <div class="edicion-datos-control">
+                        <label for="order">Destacado: </label>
+                        <select id="order" name="order">
+                            <option value="1" selected>Si</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
                 <div class="edicion-botones">
                     <button type="submit">Guardar</button>
-                    <button type="button">Cancelar</button>
+                    <button type="button" class="producto-detalle-caracteristicas-botones-submit"><a href="/products">Cancelar</a></button>
                 </div>
             </div>
         </form>

@@ -4,6 +4,7 @@ const mainRoutes = require('./routers/mainRoutes');
 const usersRoutes = require('./routers/usersRoutes');
 const productsRoutes = require('./routers/productsRoutes');
 const cartRoutes = require('./routers/cartRoutes');
+const usersController = require('./controllers/usersController');
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
@@ -16,7 +17,10 @@ app.get('/', mainRoutes);
 app.get('/nuestraHistoria', mainRoutes);
 
 app.get('/login', usersRoutes);
+app.post('/login', usersRoutes);
 app.get('/register', usersRoutes);
+app.post('/register', usersRoutes);
+app.get('/profile', usersRoutes);
 
 app.get('/products', productsRoutes);
 app.get('/products/create', productsRoutes);

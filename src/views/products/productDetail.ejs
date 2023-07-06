@@ -4,10 +4,10 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <h1>Detalles</h1>
+        <h1>Detalle del Producto</h1>
         <div class="producto-detalle">
             <div class="producto-detalle-imagen">
-                <img src="/img/<%= producto.image %>" alt="" class="imagen">
+                <img src="/img/products/<%= producto.image %>" alt="" class="imagen">
             </div>
             <div class="producto-detalle-caracteristicas">
                 <h2><%= producto.name %></h2>
@@ -31,7 +31,7 @@
             <% productosCategory.forEach(function(producto){ %>
                 <div class="productos">
                     <div class="productos-imagen">
-                        <img src="/images/<%= producto.image %>" alt="">
+                        <img src="/img/products/<%= producto.image %>" alt="">
                     </div>
                     <div class="productos-info">
                         <p class="productos-info-titulo"><%= producto.name %></p>

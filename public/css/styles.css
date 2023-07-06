@@ -5,7 +5,7 @@
 }
 
 body{
-    background: #f9f9f9 url(../images/bg.jpg);
+    background: #f9f9f9 url(../img/bg.jpg);
     margin: 0px;
 }
 
@@ -13,6 +13,13 @@ header{
     display: flex;
     flex-direction: column;
     padding: 0px;
+}
+
+.error-msg{
+    color: red;
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Navegación principal */
@@ -68,7 +75,6 @@ hr{
 main{
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin-top: 10px;
     align-items: center;
 }
@@ -322,78 +328,32 @@ h1, h2, h3{
     text-decoration: none;
 }
 
-/** Estilos para la edición de un producto **/
+/** Estilos para la edición de un producto en mobile**/
 .edicion{
     display: flex;
     flex-direction: column;
-    width: 80%;
     height: auto;
-    margin: auto;
+    margin: 5px;
     margin-bottom: 20px;
-    padding: 5px 40px;
+    padding: 5px 20px;
     border: 1px solid #308781;
 }
 
 .edicion-datos{
     display: flex;
     flex-direction: row;
-    padding: 10px;
-}
-
-.edicion-datos-1 input, .edicion-datos-2 input{
-    width: 100%;
-}
-
-.edicion-datos-1 label, .edicion-datos-2 label{
-    color: #308781;
-}
-
-.edicion-datos-control{
     padding: 5px;
 }
 
-.edicion-botones{
-    text-align: center;
-}
-
-.edicion-botones button{
-    width: 130px;
-    height: 40px;
+.edicion-datos-control{
+    width: 100%;
     margin: 5px;
-    padding: 11px;
-    font-size: 15px;
-    color: white;
-    background-color: #308781;
-    border: none;
-    border-radius: 8px;
-}   
-.edicion{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    margin: auto;
-    margin-bottom: 20px;
     padding: 5px;
-    border: 1px solid #308781;
-}
-
-.edicion-datos{
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-}
-
-.edicion-datos-1 input, .edicion-datos-2 input{
-    width: 100%;
-}
-
-.edicion-datos-1 label, .edicion-datos-2 label{
     color: #308781;
 }
 
-.edicion-datos-control{
-    padding: 5px;
+.edicion-datos-control-input{
+    width: 100%;
 }
 
 .edicion-botones{
@@ -525,6 +485,9 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     display: none;
 }
 
+
+
+
 /* Estilos para visualización en PC */
 @media only screen and (min-width: 769px) {
     header{
@@ -595,12 +558,14 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     }
 
     main{
-        padding-top: 300px;
+        padding-top: 250px;
         padding-left: 20px;
         padding-bottom: 30px;
+        text-align: left;
     }
 
     .novedades{
+        width: 100%;
         text-align: left;
         padding-left: 20px;
     }
@@ -881,40 +846,13 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         text-decoration: none;
     }
 
-    /** Estilos para la edición de un producto **/
+    /** Estilos para la edición de un producto en PC **/
     .edicion{
         display: flex;
         flex-direction: column;
-        height: auto;
-        margin: auto;
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px solid #308781;
-    }
-
-    .edicion-datos{
-        display: flex;
-        flex-direction: row;
-        margin: 10px;
-    }
-
-    .edicion-datos-1, .edicion-datos-2{
         width: 100%;
-    }
-
-    .edicion-datos-1 input, .edicion-datos-2 input{
-        width: 50%;
-    }
-
-    .edicion-datos-1 label, .edicion-datos-2 label{
-        color: #308781;
-        padding: 5px;
-    }
-
-    .edicion-datos-control{
-        display: flex;
-        flex-direction: row;
-        padding: 5px;
+        height: auto;
+        border: 1px solid #308781;
     }
 
     .edicion-datos-control-check{

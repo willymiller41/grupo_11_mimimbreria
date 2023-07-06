@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h1>Mi Perfil</h1>
+        <div class="producto-detalle">
+            <div class="producto-detalle-imagen">
+                <img src="/img/avatars/<%= user.avatar %>" alt="" class="imagen">
+            </div>
+            <div class="producto-detalle-caracteristicas">
+                <h3>Nombre: <%= user.name %></h3>
+                <h3>Apellido: <%= user.surname %></h3>
+                <h3>Email: <%= user.email %></h3></span>
+                <h3>Teléfono: <%= user.phone %></h3>
+                <h3>Dirección: <%= user.address %></h3>
+                <h3>Código Postal: <%= user.code %></h3>
+            </div>
+        </div>
+        <div class="producto-detalle-caracteristicas-botones">
+ <!--            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/edit/">Editar</a></button>
+            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/create">Agregar</a></button>
+            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/delete/">Borrar</a></button>
+            <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Comentar</button>
+            <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Agregar al Carrito</button> -->
+        </div>
+    </main>
+    <hr>
+    <%- include('../partials/footer')  %>
+</body>
+</html>

@@ -1,12 +1,67 @@
+const fs = require('fs');
+const path = require('path');
+const { validationResult } = require('express-validator');
+const bcryptjs = require('bcryptjs');
+
+const usersFilePath = path.join(__dirname, '../database/user.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 let usersController = {
    
     login: function(req, res){
         res.render('users/login')
     },
 
+    processLogin: function(req,res){
+      const resultValidation = validationResult(req);
+      if(resultValidation.errors.length > 0){
+        return res.render(path.join(__dirname, "../views/users/login"), {errors: resultValidation.mapped(), oldData: req.body});
+      }
+      const userLogged = users.find(user => user.email === req.body.email && bcryptjs.compareSync(req.body.password, user.password ));
+      if(userLogged){
+        console.log("el usuario se logueó correctamente");
+        res.render('users/profile', {user: userLogged});
+      }else{
+        return res.render(path.join(__dirname, "../views/users/login"), {errors: {password:{msg:"Credenciales inválidas"}}, oldData: req.body.email});
+      }
+    },
+    
     register: function(req, res){
-        res.render('users/register')
-    }
+      res.render('users/register')
+    },
+
+    processRegister: function(req,res){
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0){
+          return res.render(path.join(__dirname, "../views/users/register"), {errors: resultValidation.mapped(), oldData: req.body});
+        }
+        const userInDb = users.find(user => user.email === req.body.email);
+        if(userInDb){
+          return res.render(path.join(__dirname, "../views/users/register"), {errors: {email:{msg:"El email ya está registrado"}}, oldData: req.body});
+        }
+        const userToCreate = {
+          id: users[users.length -1].id + 1,
+          name: req.body.name,
+          surname: req.body.surname,
+          email: req.body.email,
+          phone: req.body.phone,
+          address: req.body.address,
+          code: req.body.code,
+          password: bcryptjs.hashSync(req.body.password, 10),
+          avatar: req.file.filename,
+          role: "user"
+        };
+        users.push(userToCreate);
+        let usersJson = JSON.stringify(users);
+        fs.writeFileSync(usersFilePath, usersJson);
+    
+        return res.redirect("/login");
+    },
+
+    profile: function(req, res){
+      const user = users.find(user => user.id == req.params.id)
+      res.render('users/profile', {user});
+    },
 
  };
  
