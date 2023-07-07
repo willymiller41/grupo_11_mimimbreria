@@ -43,6 +43,12 @@ header{
     display: none;
 }
 
+.avatar-logged{
+    width: 35px;
+    height: auto;
+    border-radius: 50%;
+}
+
 .navegacion{
     display: none;
 }
@@ -102,7 +108,7 @@ h1, h2, h3{
     width: 220px;
     height: auto;
     margin: 12px;
-    background: #308781 url(../images/noise.png);
+    background: #308781 url(../img/noise.png);
     border: 1px solid #308781;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 1px black;
@@ -453,39 +459,22 @@ h1, h2, h3{
 footer{
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
     text-align: center;
-}
-
-footer .footer-menu-titulo, .footer-productos-titulo, .footer-descubri-titulo, .footer-redes-titulo{
-    font-size: 20px;
-    color: #308781;
-    font-weight: 400;
-}
-
-footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .footer-redes-links{
-    display: flex;
-    flex-direction: row;
     margin: auto;
-    justify-content: space-around;
-    font-size: 35px;
-    font-weight: 400;
     color: #308781;
-}
-
-.footer-redes-links i{
-    color: #308781;
-}
-
-.footer-ubicacion{
-    margin: auto;
-    padding: 10px;
 }
 
 .footer-info{
     display: none;
 }
 
-
+.footer-redes-links i{
+    color: #308781;
+    font-size: 40px;
+    margin: 5px;
+    margin-bottom: 30px;
+}
 
 
 /* Estilos para visualización en PC */
@@ -514,7 +503,7 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         display: flex;
         flex-direction: row;
         margin: auto;
-        width: 50%;
+        width: 45%;
         justify-content: space-between;
         font-size: 15px;
     }
@@ -541,16 +530,22 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
     .usuarios{
         display: flex;
         flex-direction: row;
-        font-size: 20px;
+        font-size: 25px;
         color: #308781;
         align-items: baseline;
-        margin: 5px;
+        padding-top: 5px;
+        padding-right: 30px;
     }
 
     .usuarios i{
         padding: 5px;
         padding-top: 15px;
         color: #308781;
+    }
+
+    .avatar-logged{
+        width: 35px;
+        height: auto;
     }
 
     .burger-menu{
@@ -879,32 +874,10 @@ footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .foo
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 90%;
+        padding-top: 20px;
+        text-align: center;
         margin: auto;
-    }
-
-    .footer-redes{
-        width: 40%;
-    }
-    
-    footer .footer-menu-titulo, .footer-productos-titulo, .footer-descubri-titulo, .footer-redes-titulo{
-        font-size: 25px;
         color: #308781;
-        font-weight: 400;
-    }
-    
-    footer .footer-menu-links, .footer-productos-links, .footer-descubri-links, .footer-redes-links{
-        display: flex;
-        flex-direction: row;
-        font-size: 30px;
-        font-weight: 200;
-    }
-    
-    .footer-ubicacion{
-/*         display: flex;
-        flex-direction: row; */
-        margin: 20px;
-
     }
     
     .footer-info{

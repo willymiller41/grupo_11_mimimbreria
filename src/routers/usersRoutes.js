@@ -4,6 +4,8 @@ const usersController = require('../controllers/usersController');
 const multer = require('multer');
 const path = require("path");
 const { body } = require('express-validator');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //Seteo de Multer
 const storage = multer.diskStorage({
@@ -54,10 +56,11 @@ usersLoginValidations = [
     body('password').notEmpty().withMessage("Debe ingresar una contraseña").bail().isLength({min:6}).withMessage('El password debe tener al menos 6 caracteres').bail(),
 ]
 
-router.get("/login", usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
 router.post("/login", usersLoginValidations, usersController.processLogin);
-router.get("/register", usersController.register);
+router.get("/register", guestMiddleware, usersController.register);
 router.post("/register", upload.single('avatar'), usersRegisterValidations, usersController.processRegister);
-router.get("/profile", usersController.profile);
+router.get("/profile", authMiddleware, usersController.profile);
+router.get("/logout", usersController.logout);
 
 module.exports = router;

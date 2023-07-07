@@ -11,7 +11,7 @@
                 <% if(locals.errors && errors.email){ %>
                     <div class="error-msg"><%= errors.email.msg %></div> 
                 <% } %>
-                <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData : null  %>">
+                <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null  %>">
             </div>
             <div class="login-datos">
                 <label for="password">Contraseña: </label>

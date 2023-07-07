@@ -20,29 +20,34 @@
             </div>
         </div>
         <div class="producto-detalle-caracteristicas-botones">
-            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/edit/<%= producto.id %>">Editar</a></button>
-            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/create">Agregar</a></button>
-            <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/delete/<%= producto.id %>">Borrar</a></button>
-            <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Comentar</button>
-            <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Agregar al Carrito</button>
+            <% if(locals.isLogged && locals.userLogged.role == "admin") { %>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/edit/<%= producto.id %>">Editar</a></button>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/create">Agregar</a></button>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit"><a href="/products/delete/<%= producto.id %>">Borrar</a></button>
+            <% } else{ %>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Comentar</button>
+                <button type="submit" class="producto-detalle-caracteristicas-botones-submit">Agregar al Carrito</button>
+            <% } %>
         </div>
         <h1>Productos Similares</h1>
         <div class="novedades-productos">
-            <% productosCategory.forEach(function(producto){ %>
+            <% productosCategory.forEach(function(p){
+                if(p.id != producto.id){
+                %>
                 <div class="productos">
                     <div class="productos-imagen">
-                        <img src="/img/products/<%= producto.image %>" alt="">
+                        <img src="/img/products/<%= p.image %>" alt="">
                     </div>
                     <div class="productos-info">
-                        <p class="productos-info-titulo"><%= producto.name %></p>
-                        <p>$ <%= producto.price %></p>
+                        <p class="productos-info-titulo"><%= p.name %></p>
+                        <p>$ <%= p.price %></p>
                     </div>
                     <div class="productos-info-botonera">
-                        <a href="/products/detail/<%= producto.id %>">Ver más</a>
+                        <a href="/products/detail/<%= p.id %>">Ver más</a>
                         <i class="fas fa-truck"></i>
                     </div>
                 </div>
-            <% }) %>
+            <% }}) %>
         </div>
         <h1>Comentarios</h1>
         <div class="productos-comentarios">

@@ -9,7 +9,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 let usersController = {
    
     login: function(req, res){
-        res.render('users/login')
+      return res.render('users/login');
     },
 
     processLogin: function(req,res){
@@ -17,17 +17,24 @@ let usersController = {
       if(resultValidation.errors.length > 0){
         return res.render(path.join(__dirname, "../views/users/login"), {errors: resultValidation.mapped(), oldData: req.body});
       }
-      const userLogged = users.find(user => user.email === req.body.email && bcryptjs.compareSync(req.body.password, user.password ));
-      if(userLogged){
-        console.log("el usuario se logueó correctamente");
-        res.render('users/profile', {user: userLogged});
-      }else{
+      const userToLogin = users.find(user => user.email === req.body.email);
+      if(userToLogin){
+        const isPasswordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        if(isPasswordCorrect){
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+          if(req.body.remember){
+            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60});
+          }
+          res.redirect('/profile');
+        }else{
         return res.render(path.join(__dirname, "../views/users/login"), {errors: {password:{msg:"Credenciales inválidas"}}, oldData: req.body.email});
+        }
       }
     },
     
     register: function(req, res){
-      res.render('users/register')
+      res.render('users/register');
     },
 
     processRegister: function(req,res){
@@ -59,10 +66,16 @@ let usersController = {
     },
 
     profile: function(req, res){
-      const user = users.find(user => user.id == req.params.id)
-      res.render('users/profile', {user});
+      res.render('users/profile', {
+        user: req.session.userLogged
+      })
     },
 
+    logout: function(req, res){
+      res.clearCookie('userEmail');
+      req.session.destroy();
+      res.redirect('/');
+    }
  };
  
  module.exports = usersController;
