@@ -44,8 +44,19 @@
         "phone": "1131742779",
         "address": "Washington 3664",
         "code": "1419",
-        "password": "$2a$10$76C9R7h2K44d6aKoG78m2OXT2IcPSCixVdQBSxLl7NCWZBj8fflby",
         "avatar": "usuario_1688686277159.jpg",
+        "role": "user"
+    },
+    {
+        "id": 5,
+        "name": "karina",
+        "surname": "fusini",
+        "email": "kfusini@gmail.com",
+        "phone": "23083002",
+        "address": "Washington 3664",
+        "code": "5530",
+        "password": "$2a$10$4eaHKLu6BCVDKpFjlbZDbOIimi4e69VvvEBNiEaMOwJHkrN7G00bK",
+        "avatar": "usuario_1689035868391.jpg",
         "role": "user"
     }
 ]

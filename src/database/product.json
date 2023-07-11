@@ -53,5 +53,16 @@
         "stock": "50",
         "order": "0",
         "image": "producto_1688563860208.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Sillas para living",
+        "description": "Sillas altas con base redonda",
+        "price": "2000",
+        "category": "Sillas",
+        "discount": "10",
+        "stock": "40",
+        "order": "0",
+        "image": "producto_1689036153341.jpg"
     }
 ]

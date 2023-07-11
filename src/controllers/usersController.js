@@ -18,7 +18,10 @@ let usersController = {
         return res.render(path.join(__dirname, "../views/users/login"), {errors: resultValidation.mapped(), oldData: req.body});
       }
       const userToLogin = users.find(user => user.email === req.body.email);
+      // const passwordFromLogin = userToLogin.password;
+      // const passwordFromBody = req.body.password;
       if(userToLogin){
+        // const isPasswordCorrect = bcryptjs.compareSync(passwordFromBody, passwordFromLogin);
         const isPasswordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password);
         if(isPasswordCorrect){
           delete userToLogin.password;
