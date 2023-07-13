@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 const usersFilePath = path.join(__dirname, '../database/user.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -20,9 +20,10 @@ let usersController = {
       const userToLogin = users.find(user => user.email === req.body.email);
       // const passwordFromLogin = userToLogin.password;
       // const passwordFromBody = req.body.password;
+
       if(userToLogin){
         // const isPasswordCorrect = bcryptjs.compareSync(passwordFromBody, passwordFromLogin);
-        const isPasswordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        const isPasswordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password);
         if(isPasswordCorrect){
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
@@ -31,8 +32,10 @@ let usersController = {
           }
           res.redirect('/profile');
         }else{
-        return res.render(path.join(__dirname, "../views/users/login"), {errors: {password:{msg:"Credenciales inválidas"}}, oldData: req.body.email});
+          return res.render(path.join(__dirname, "../views/users/login"), {errors: {password:{msg:"La contraseña es incorrecta"}}, oldData: req.body});
         }
+      }else{
+        return res.render(path.join(__dirname, "../views/users/login"), {errors: {email:{msg:"El email no está registrado"}}, oldData: req.body});
       }
     },
     
@@ -57,7 +60,7 @@ let usersController = {
           phone: req.body.phone,
           address: req.body.address,
           code: req.body.code,
-          password: bcryptjs.hashSync(req.body.password, 10),
+          password: bcrypt.hashSync(req.body.password, 10),
           avatar: req.file.filename,
           role: "user"
         };

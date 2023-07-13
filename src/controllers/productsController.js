@@ -42,20 +42,30 @@ const usersController = {
 
     //Almacenar un producto
     store: function(req, res){
+        console.log(products);
         const resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
             return res.render(path.join(__dirname, "../views/products/productCreate"), {errors: resultValidation.mapped(), oldData: req.body});
         }
         if(req.file){
-            let producto = {
-              id: products[products.length -1].id + 1,
-              ...req.body,
-              image: req.file.filename
+            console.log(products);
+            if(products.length == 0){
+                var producto = {
+                    id: 1,
+                    ...req.body,
+                    image: req.file.filename
+                  }
+            }else{
+                var producto = {
+                    id: products[products.length -1].id + 1,
+                    ...req.body,
+                    image: req.file.filename
+                }
             }
             products.push(producto);
             let productsJson = JSON.stringify(products);
             fs.writeFileSync(productsFilePath, productsJson);
-            return res.redirect('/');
+            return res.render('products/productList', {products});
         }
     },
 

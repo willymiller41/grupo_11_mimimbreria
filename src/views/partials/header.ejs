@@ -26,7 +26,7 @@
         <div class="usuarios">
             <input type="search" id="search" placeholder="Buscar..." />
             <i class="fas fa-search"></i>
-            <% if(locals.isLogged) { %>
+            <% if(locals.userLogged) { console.log(locals.userLogged) %>
                 <a href="/profile"><img class="avatar-logged" src="/img/avatars/<%= locals.userLogged.avatar %>" alt=""></i></a>
             <% } else{ %>
                 <a href="/login"><i class="fas fa-user"></i></a>

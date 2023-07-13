@@ -1,68 +1,79 @@
 [
-    {
-        "id": 1,
-        "name": "Canastos Grandes",
-        "description": "Canastos de varios tamaños y diseños para usos múltiples.",
-        "price": "3000",
-        "category": "Canastos",
-        "discount": "",
-        "stock": "40",
-        "order": "1",
-        "image": "producto_1688470798775.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Canastos para ropa",
-        "description": "Canastos de varios tamaños y diseños para guardar la ropa.",
-        "price": "5500",
-        "category": "Canastos",
-        "discount": "",
-        "stock": "40",
-        "order": "1",
-        "image": "producto_1688471161684.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Canastos Floreros",
-        "description": "Canastos de base ancha para flores y plantas bajas",
-        "price": "2500",
-        "category": "Canastos",
-        "discount": "10",
-        "stock": "40",
-        "order": "1",
-        "image": "producto_1688482039274.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Canastos Floreros Altos",
-        "description": "Canastos de base circular para plantas altas",
-        "price": "5500",
-        "category": "Canastos",
-        "discount": "",
-        "stock": "40",
-        "order": "0",
-        "image": "producto_1688504700964.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Mesa ratona",
-        "description": "Mesa baja para distintos ambientes",
-        "price": "3000",
-        "category": "Mesas",
-        "discount": "10",
-        "stock": "50",
-        "order": "0",
-        "image": "producto_1688563860208.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Sillas para living",
-        "description": "Sillas altas con base redonda",
-        "price": "2000",
-        "category": "Sillas",
-        "discount": "10",
-        "stock": "40",
-        "order": "0",
-        "image": "producto_1689036153341.jpg"
-    }
+ {
+  "id": 1,
+  "name": "Canastos Grandes",
+  "description": "Canastos de varios tamaños y diseños para usos múltiples",
+  "price": "3500",
+  "category": "",
+  "discount": "10",
+  "stock": "40",
+  "order": "1",
+  "image": "producto_1689194563731.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Canastos para ropa",
+  "description": "Canastos de varios tamaños y diseños para guardar la ropa",
+  "price": "5500",
+  "category": "Canastos",
+  "discount": "12",
+  "stock": "40",
+  "order": "1",
+  "image": "producto_1689194809421.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Canastos floreros",
+  "description": "Canastos de base ancha para flores y plantas bajas",
+  "price": "2500",
+  "category": "Canastos",
+  "discount": "",
+  "stock": "40",
+  "order": "0",
+  "image": "producto_1689195550231.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Canastos floreros grandes",
+  "description": "Canastos de base circular para plantas altas",
+  "price": "3600",
+  "category": "Canastos",
+  "discount": "12",
+  "stock": "40",
+  "order": "1",
+  "image": "producto_1689195643918.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Canastos base ancha",
+  "description": "Canastos con base circular de 40 cms de diámetro",
+  "price": "3800",
+  "category": "Canastos",
+  "discount": "10",
+  "stock": "40",
+  "order": "1",
+  "image": "producto_1689196302633.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Sillas para niñ@s",
+  "description": "Sillas bajas de 1 mt de alto con base cuadrada",
+  "price": "4500",
+  "category": "Sillas",
+  "discount": "10",
+  "stock": "40",
+  "order": "1",
+  "image": "producto_1689197575435.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Caballito mecedor",
+  "description": "Caballito para niñ@s de 50cms de alto y base reforzada en madera",
+  "price": "5000",
+  "category": "Infantiles",
+  "discount": "",
+  "stock": "40",
+  "order": "1",
+  "image": "producto_1689198357000.jpg"
+ }
 ]

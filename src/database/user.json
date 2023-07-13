@@ -8,7 +8,6 @@
         "address": "Aguirre 2830",
         "code": "5530",
         "password": "$2a$10$Qlrn40ursv9IQf.Z3xH7L./Fqxhm2NvxRFeT58isrpMYo.oUqOyTu",
-        "password2": "123456",
         "avatar": "usuario_1688592698061.jpg",
         "role": "admin"
     },
@@ -38,17 +37,6 @@
     },
     {
         "id": 4,
-        "name": "Willy",
-        "surname": "Miller",
-        "email": "willymiller@hotmail.com",
-        "phone": "1131742779",
-        "address": "Washington 3664",
-        "code": "1419",
-        "avatar": "usuario_1688686277159.jpg",
-        "role": "user"
-    },
-    {
-        "id": 5,
         "name": "karina",
         "surname": "fusini",
         "email": "kfusini@gmail.com",
@@ -57,6 +45,18 @@
         "code": "5530",
         "password": "$2a$10$4eaHKLu6BCVDKpFjlbZDbOIimi4e69VvvEBNiEaMOwJHkrN7G00bK",
         "avatar": "usuario_1689035868391.jpg",
+        "role": "user"
+    },
+    {
+        "id": 5,
+        "name": "Willy",
+        "surname": "Miller",
+        "email": "willymiller@hotmail.com",
+        "phone": "1131742779",
+        "address": "Washington 3664",
+        "code": "1419",
+        "password": "$2b$10$2Wiui99z60mDIQj/X0A8/.FRD5faHVeOKOkfHLVdanjmIRq1797JS",
+        "avatar": "usuario_1689190824365.jpg",
         "role": "user"
     }
 ]

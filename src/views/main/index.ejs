@@ -5,13 +5,15 @@
     <%- include('../partials/header')  %>
     <main>
         <div class="novedades">
-            <h1>Novedades</h1>
+            <h1>Productos destacados</h1>
             <div class="novedades-productos">
                 <% products.forEach(function(producto){ 
-                    if(producto.order == 1){ %>
+                    console.log(producto);
+                    if(producto.order == '1'){
+                    %>
                         <div class="productos">
                             <div class="productos-imagen">
-                                <img src="/img/products/<%= producto.image %>" alt="Canastos leñeros">
+                                <img src="/img/products/<%= producto.image %>" alt="">
                             </div>
                             <div class="productos-info">
                                 <p class="productos-info-titulo"><%= producto.name %></p>

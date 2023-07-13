@@ -47,7 +47,7 @@ router.get("/products/detail/:id/", productsController.detail);
 router.get("/products/edit/:id", authMiddleware, productsController.edit);
 router.post('/products/edit/:id', upload.single('image'), productsController.storeEdited);
 router.get("/products/create/", authMiddleware, productsController.create);
-router.post("/products/create/", upload.single('image'), validations, productsController.store);
+router.post("/products/create/", authMiddleware, upload.single('image'), validations, productsController.store);
 router.get("/products/delete/:id/", productsController.delete);
 
 module.exports = router;
